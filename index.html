@@ -3,94 +3,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omar Market - Officiel</title>
+    <title>Omar Market - Boutique Officielle</title>
     <style>
         :root { --primary: #ff9800; --dark: #1a1a1a; --light: #f8f9fa; }
         body { font-family: 'Segoe UI', sans-serif; background-color: var(--light); margin: 0; padding: 0; color: var(--dark); }
-        header { background: var(--dark); color: white; padding: 50px 20px; text-align: center; border-bottom: 5px solid var(--primary); }
-        header h1 { margin: 0; font-size: 3em; letter-spacing: 2px; }
-        header p { color: var(--primary); font-weight: bold; }
-        .filter-nav { background: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        .filter-btn { background: none; border: 2px solid var(--dark); padding: 10px 20px; margin: 5px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s; }
+        header { background: var(--dark); color: white; padding: 40px 20px; text-align: center; border-bottom: 5px solid var(--primary); }
+        header h1 { margin: 0; font-size: 2.5em; letter-spacing: 2px; text-transform: uppercase; }
+        header p { color: var(--primary); font-weight: bold; margin-top: 10px; }
+        .filter-nav { background: white; padding: 15px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        .filter-btn { background: none; border: 2px solid var(--dark); padding: 8px 18px; margin: 5px; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.3s; }
         .filter-btn.active, .filter-btn:hover { background: var(--dark); color: white; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 30px; }
-        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); transition: 0.3s; border: 1px solid #eee; }
-        .card:hover { transform: translateY(-10px); }
-        .card img { width: 100%; height: 280px; object-fit: cover; }
-        .card-content { padding: 20px; text-align: center; }
-        .tag { font-size: 0.7em; background: #eee; padding: 3px 8px; border-radius: 3px; font-weight: bold; color: #666; display: inline-block; margin-bottom: 10px; }
-        .price { color: var(--primary); font-size: 1.4em; font-weight: bold; margin: 10px 0; }
-        .btn-buy { display: block; background: var(--primary); color: white; text-decoration: none; padding: 12px; border-radius: 5px; font-weight: bold; }
-        .contact-section { background: #fff; padding: 40px 20px; margin-top: 50px; border-top: 2px solid #eee; }
-        .contact-form { max-width: 600px; margin: 0 auto; display: flex; flex-direction: column; }
-        .contact-form input, .contact-form textarea { margin-bottom: 15px; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-family: inherit; }
-        .btn-send { background: var(--dark); color: white; border: none; padding: 15px; cursor: pointer; font-weight: bold; border-radius: 5px; }
-        footer { text-align: center; padding: 30px; background: var(--dark); color: white; margin-top: 50px; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 30px 20px; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: 0.3s; display: flex; flex-direction: column; }
+        .card:hover { transform: translateY(-5px); }
+        .card img { width: 100%; height: 250px; object-fit: cover; background: #eee; }
+        .card-content { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .tag { font-size: 0.7em; background: #f0f0f0; padding: 4px 10px; border-radius: 4px; font-weight: bold; color: #555; display: inline-block; margin-bottom: 10px; }
+        .card h3 { font-size: 1.1em; margin: 10px 0; height: 45px; overflow: hidden; }
+        .price-tag { color: var(--primary); font-weight: bold; margin-bottom: 15px; }
+        .btn-buy { display: block; background: var(--primary); color: white; text-decoration: none; padding: 12px; border-radius: 5px; font-weight: bold; transition: 0.2s; }
+        .btn-buy:hover { background: #e68a00; }
+        footer { text-align: center; padding: 40px; background: var(--dark); color: white; margin-top: 50px; }
     </style>
 </head>
 <body>
 
 <header>
     <h1>OMAR MARKET</h1>
-    <p>Électronique • Soins • Maison</p>
+    <p>Produits High-Tech & Bien-être</p>
 </header>
 
 <div class="filter-nav">
     <button class="filter-btn active" onclick="filterSelection('all')">TOUT</button>
-    <button class="filter-btn" onclick="filterSelection('tech')">ÉLECTRONIQUE</button>
-    <button class="filter-btn" onclick="filterSelection('soin')">SOINS & BEAUTÉ</button>
-    <button class="filter-btn" onclick="filterSelection('maison')">MAISON</button>
+    <button class="filter-btn" onclick="filterSelection('tech')">TECH</button>
+    <button class="filter-btn" onclick="filterSelection('sante')">SANTÉ & BIEN-ÊTRE</button>
 </div>
 
 <div class="container">
     <div class="product-grid">
         
-        <div class="card soin">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/BZuBp_20260305101151474.jpg" alt="Crème visage or 24k">
+        <div class="card tech">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/GGDLV_20251213142525688.png" alt="Smart Prayer Ring">
             <div class="card-content">
-                <span class="tag">SOINS & BEAUTÉ</span>
-                <h3>Crème visage au collagène et or 24 carats</h3>
-                <p class="price">Paiement à la livraison</p>
-                <a href="https://seller.shipeh.com/cod-drop/%D9%83%D8%B1%D9%8A%D9%85-%D8%A7%D9%84%D9%88%D8%AC%D9%87%20%D8%A8%D8%A7%D9%84%D9%83%D9%82%D9%84%D8%A7%D8%AC%D9%8A%D9%86%20%D9%88%D8%A7%D9%84%D8%B0%D9%87%D8%A8%20%D8%A7%D9%84%D8%AE%D8%A7%D9%84%D8%B5%20%D8%B9%D9%8A%D8%A7%D8%B1%2024" target="_blank" class="btn-buy">🛒 Commander maintenant</a>
+                <div>
+                    <span class="tag">TECH RELIGION</span>
+                    <h3>Bague de prière intelligente (Smart Ring)</h3>
+                </div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarmarketly.youcan.store/products/ring" target="_blank" class="btn-buy">🛒 Commander</a>
             </div>
         </div>
 
-        <div class="card maison tech">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/PTW0X_20260222131055524.jpg" alt="LED Voiture">
+        <div class="card sante">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/PTW0X_20260222131055524.jpg" alt="Support Coude">
             <div class="card-content">
-                <span class="tag">MAISON & ACCESSOIRES</span>
-                <h3>Éclairage LED Intérieur de Voiture</h3>
-                <p class="price">Paiement à la livraison</p>
-                <a href="https://seller.shipeh.com/cod-drop/%D8%A7%D8%B6%D8%A7%D8%A1%D8%A9-%D9%85%D8%AA%D8%B9%D8%AF%D8%AF%D8%A9%20%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%BA%20%D8%A8%D8%A7%D9%84%D9%88%D8%A1%D9%86%20%D9%85%D8%AE%D8%AA%D9%84%D9%81%D8%A9" target="_blank" class="btn-buy">🛒 Commander maintenant</a>
+                <div>
+                    <span class="tag">SANTÉ</span>
+                    <h3>Support flexible de maintien pour coude</h3>
+                </div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarmarketly.youcan.store/products/support" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card sante tech">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/AZe5E_20260311132625137.jpg" alt="Massage Gun">
+            <div class="card-content">
+                <div>
+                    <span class="tag">BIEN-ÊTRE</span>
+                    <h3>Pistolet de massage musculaire (6 vitesses)</h3>
+                </div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarmarketly.youcan.store/products/gadget" target="_blank" class="btn-buy">🛒 Commander</a>
             </div>
         </div>
 
         <div class="card tech">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/GGDLV_20251213142525688.png" alt="Avion Télécommandé">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/PTW0X_20260222131055524.jpg" alt="Veilleuse Coran">
             <div class="card-content">
-                <span class="tag">ÉLECTRONIQUE</span>
-                <h3>Avion de Chasse Télécommandé Pro</h3>
-                <p class="price">Paiement à la livraison</p>
-                <a href="https://seller.shipeh.com/cod-drop/%D9%84%D8%B9%D8%A8%D8%A9-%D8%B7%D8%A7%D8%A6%D8%B1%D8%A9%20%D9%85%D9%82%D8%A7%D8%AA%D9%84%D8%A9%20%D9%8A%D8%AA%D9%85%20%D8%A7%D9%84%D8%AA%D8%AD%D9%83%D9%85%20%D9%81%D9%8A%D9%87%D8%A7%20%D8%B9%D9%86%20%D8%A8%D8%B9%D8%AF" target="_blank" class="btn-buy">🛒 Commander maintenant</a>
+                <div>
+                    <span class="tag">TECH RELIGION</span>
+                    <h3>Veilleuse Coranique avec télécommande</h3>
+                </div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarmarketly.youcan.store/products/speaker" target="_blank" class="btn-buy">🛒 Commander</a>
             </div>
         </div>
 
     </div>
-
-    <div class="contact-section">
-        <h2 style="text-align: center;">Une question ? Laissez-moi un message</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Votre Nom" required>
-            <input type="email" placeholder="Votre Email" required>
-            <textarea rows="5" placeholder="Votre message..." required></textarea>
-            <button type="submit" class="btn-send">Envoyer le message</button>
-        </form>
-    </div>
 </div>
 
 <footer>
-    <p>&copy; 2026 Omar Market - Service Client : 07 46 56 32 29</p>
+    <p>&copy; 2026 Omar Market - Livraison Rapide</p>
 </footer>
 
 <script>
@@ -100,6 +105,11 @@
         for (var i = 0; i < x.length; i++) {
             x[i].style.display = "none";
             if (x[i].className.indexOf(c) > -1) x[i].style.display = "block";
+        }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+            if (btns[i].innerText.toLowerCase().includes(c) || (c=='' && btns[i].innerText=='TOUT')) btns[i].classList.add("active");
         }
     }
 </script>
