@@ -31,19 +31,31 @@
 
 <header>
     <h1>OMAR MARKET</h1>
-    <p>Électronique • Santé • Maison</p>
+    <p>Électronique • Santé • Cuisine</p>
 </header>
 
 <div class="filter-nav">
     <button class="filter-btn active" onclick="filterSelection('all')">TOUT</button>
     <button class="filter-btn" onclick="filterSelection('tech')">TECH</button>
     <button class="filter-btn" onclick="filterSelection('sante')">SANTÉ & BEAUTÉ</button>
-    <button class="filter-btn" onclick="filterSelection('maison')">MAISON</button>
+    <button class="filter-btn" onclick="filterSelection('maison')">CUISINE & MAISON</button>
 </div>
 
 <div class="container">
     <div class="product-grid">
         
+        <div class="card maison">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/gdIAT_20251124131035163.jpg" alt="Broyeur Électrique">
+            <div class="card-content">
+                <div>
+                    <span class="tag">CUISINE</span>
+                    <h3>Broyeur Électrique Multi-usages</h3>
+                </div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/grinder" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
         <div class="card tech">
             <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/Gi2pw_20260107093131856.jpg" alt="Lampe Lunaire">
             <div class="card-content">
@@ -73,95 +85,4 @@
             <div class="card-content">
                 <div>
                     <span class="tag">TECH RELIGION</span>
-                    <h3>Bague de prière intelligente (Smart Ring)</h3>
-                </div>
-                <div class="price-tag">Paiement à la livraison</div>
-                <a href="https://omarbutique.youcan.store/products/smart-ring" target="_blank" class="btn-buy">🛒 Commander</a>
-            </div>
-        </div>
-
-        <div class="card sante">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/2XYR8_20260223134812234.jpg" alt="Toppik">
-            <div class="card-content">
-                <div>
-                    <span class="tag">BEAUTÉ</span>
-                    <h3>Toppik : Fibres capillaires anti-perte</h3>
-                </div>
-                <div class="price-tag">Paiement à la livraison</div>
-                <a href="https://omarbutique.youcan.store/products/toppik" target="_blank" class="btn-buy">🛒 Commander</a>
-            </div>
-        </div>
-
-        <div class="card maison">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/GdW7h_20260224135624469.jpg" alt="Prayer Chair">
-            <div class="card-content">
-                <div>
-                    <span class="tag">MAISON</span>
-                    <h3>Chaise de prière confortable</h3>
-                </div>
-                <div class="price-tag">Paiement à la livraison</div>
-                <a href="https://omarbutique.youcan.store/products/chair" target="_blank" class="btn-buy">🛒 Commander</a>
-            </div>
-        </div>
-
-        <div class="card sante">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/9cEVP_20260129111944628.jpg" alt="Knee Brace">
-            <div class="card-content">
-                <div>
-                    <span class="tag">SANTÉ</span>
-                    <h3>Genouillère avec Magnétothérapie</h3>
-                </div>
-                <div class="price-tag">Paiement à la livraison</div>
-                <a href="https://omarbutique.youcan.store/products/knee" target="_blank" class="btn-buy">🛒 Commander</a>
-            </div>
-        </div>
-
-        <div class="card tech">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/TNsXq_20260103203001969.jpg" alt="Video Transceiver">
-            <div class="card-content">
-                <div>
-                    <span class="tag">TECH</span>
-                    <h3>Émetteur Vidéo Sans Fil Pro</h3>
-                </div>
-                <div class="price-tag">Paiement à la livraison</div>
-                <a href="https://omarbutique.youcan.store/products/emetteur-video" target="_blank" class="btn-buy">🛒 Commander</a>
-            </div>
-        </div>
-
-        <div class="card maison">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/MltxA_20251230150032243.jpg" alt="Dumpling Machine">
-            <div class="card-content">
-                <div>
-                    <span class="tag">CUISINE</span>
-                    <h3>Machine à Raviolis Automatique</h3>
-                </div>
-                <div class="price-tag">Paiement à la livraison</div>
-                <a href="https://omarbutique.youcan.store/products/ravioli-maker-press" target="_blank" class="btn-buy">🛒 Commander</a>
-            </div>
-        </div>
-
-    </div>
-</div>
-
-<footer>
-    <p>&copy; 2026 Omar Market - Boutique Officielle</p>
-</footer>
-
-<script>
-    function filterSelection(c) {
-        var x = document.getElementsByClassName("card");
-        if (c == "all") c = "";
-        for (var i = 0; i < x.length; i++) {
-            x[i].style.display = "none";
-            if (x[i].className.indexOf(c) > -1) x[i].style.display = "flex";
-        }
-        var btns = document.getElementsByClassName("filter-btn");
-        for (var i = 0; i < btns.length; i++) {
-            btns[i].classList.remove("active");
-            if (btns[i].innerText.toLowerCase().includes(c) || (c=='' && btns[i].innerText=='TOUT')) btns[i].classList.add("active");
-        }
-    }
-</script>
-
-</body>
-</html>
+                    <h3>Bague de prière intelligente (
