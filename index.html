@@ -20,7 +20,7 @@
         .card img { width: 100%; height: 250px; object-fit: cover; background: #eee; }
         .card-content { padding: 20px; text-align: center; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
         .tag { font-size: 0.7em; background: #f0f0f0; padding: 4px 10px; border-radius: 4px; font-weight: bold; color: #555; display: inline-block; margin-bottom: 10px; }
-        .card h3 { font-size: 1.1em; margin: 10px 0; min-height: 45px; }
+        .card h3 { font-size: 1.1em; margin: 10px 0; min-height: 45px; overflow: hidden; }
         .price-tag { color: var(--primary); font-weight: bold; margin-bottom: 15px; }
         .btn-buy { display: block; background: var(--primary); color: white; text-decoration: none; padding: 12px; border-radius: 5px; font-weight: bold; transition: 0.2s; }
         .btn-buy:hover { background: #e68a00; }
@@ -31,66 +31,212 @@
 
 <header>
     <h1>OMAR MARKET</h1>
-    <p>Produits High-Tech, Santé & Maison</p>
+    <p>Électronique • Santé & Bien-être • Maison</p>
 </header>
 
 <div class="filter-nav">
     <button class="filter-btn active" onclick="filterSelection('all')">TOUT</button>
     <button class="filter-btn" onclick="filterSelection('tech')">TECH</button>
-    <button class="filter-btn" onclick="filterSelection('sante')">SANTÉ</button>
-    <button class="filter-btn" onclick="filterSelection('cuisine')">CUISINE</button>
+    <button class="filter-btn" onclick="filterSelection('sante')">SANTÉ & BEAUTÉ</button>
+    <button class="filter-btn" onclick="filterSelection('maison')">MAISON & CUISINE</button>
 </div>
 
 <div class="container">
     <div class="product-grid">
         
-        <div class="card cuisine">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/gdIAT_20251124131035163.jpg" alt="Broyeur Électrique">
+        <div class="card maison">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/gdIAT_20251124131035163.jpg" alt="Broyeur électrique">
             <div class="card-content">
-                <div>
-                    <span class="tag">CUISINE / ACCESSOIRES</span>
-                    <h3>Broyeur Électrique Multi-usages</h3>
-                </div>
+                <div><span class="tag">CUISINE</span><h3>Broyeur électrique multi-usages</h3></div>
                 <div class="price-tag">Paiement à la livraison</div>
                 <a href="https://omarbutique.youcan.store/products/grinder" target="_blank" class="btn-buy">🛒 Commander</a>
             </div>
         </div>
 
         <div class="card tech">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/Gi2pw_20260107093131856.jpg" alt="Lampe Lunaire">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/Gi2pw_20260107093131856.jpg" alt="Lampe lunaire">
             <div class="card-content">
-                <div>
-                    <span class="tag">DÉCO & TECH</span>
-                    <h3>Haut-parleur Lampe Lunaire</h3>
-                </div>
+                <div><span class="tag">DÉCO & TECH</span><h3>Lampe lunaire haut-parleur</h3></div>
                 <div class="price-tag">Paiement à la livraison</div>
                 <a href="https://omarbutique.youcan.store/products/moon-lamp" target="_blank" class="btn-buy">🛒 Commander</a>
             </div>
         </div>
 
         <div class="card sante">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/iCj1E_20260110125849794.png" alt="Support Coude">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/iCj1E_20260110125849794.png" alt="Elbow support">
             <div class="card-content">
-                <div>
-                    <span class="tag">SANTÉ</span>
-                    <h3>Support flexible pour coude</h3>
-                </div>
+                <div><span class="tag">SANTÉ</span><h3>Support flexible pour coude</h3></div>
                 <div class="price-tag">Paiement à la livraison</div>
                 <a href="https://omarbutique.youcan.store/products/flexible-support" target="_blank" class="btn-buy">🛒 Commander</a>
             </div>
         </div>
 
         <div class="card tech">
-            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/xVjyz_20260212133233096.jpg" alt="Smart Ring">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/xVjyz_20260212133233096.jpg" alt="Smart ring">
             <div class="card-content">
-                <div>
-                    <span class="tag">TECH RELIGION</span>
-                    <h3>Bague de prière Smart Ring</h3>
-                </div>
+                <div><span class="tag">TECH RELIGION</span><h3>Bague de prière intelligente</h3></div>
                 <div class="price-tag">Paiement à la livraison</div>
                 <a href="https://omarbutique.youcan.store/products/smart-ring" target="_blank" class="btn-buy">🛒 Commander</a>
             </div>
         </div>
 
         <div class="card sante">
-            <img src="
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/2XYR8_20260223134812234.jpg" alt="Toppik">
+            <div class="card-content">
+                <div><span class="tag">BEAUTÉ</span><h3>Fibres capillaires Toppik</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/toppik" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card maison">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/GdW7h_20260224135624469.jpg" alt="Chaise de prière">
+            <div class="card-content">
+                <div><span class="tag">MAISON</span><h3>Chaise de prière ergonomique</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/chair" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card sante">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/9cEVP_20260129111944628.jpg" alt="Knee brace">
+            <div class="card-content">
+                <div><span class="tag">SANTÉ</span><h3>Orthèse de genou magnétothérapie</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/knee" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card tech">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/TNsXq_20260103203001969.jpg" alt="Video transceiver">
+            <div class="card-content">
+                <div><span class="tag">TECH</span><h3>Émetteur vidéo sans fil</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/emetteur-video" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card maison">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/MltxA_20251230150032243.jpg" alt="Dumpling machine">
+            <div class="card-content">
+                <div><span class="tag">CUISINE</span><h3>Machine à raviolis automatique</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/ravioli-maker-press" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card tech">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/rh3Nz_20251213085120823.jpg" alt="Quran speaker">
+            <div class="card-content">
+                <div><span class="tag">TECH RELIGION</span><h3>Haut-parleur Coran SQ669</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/speaker" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card sante">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/E0wE8_20260209125144471.jpg" alt="Hand grip">
+            <div class="card-content">
+                <div><span class="tag">SPORT</span><h3>Équipement de musculation main</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/grip-equipment" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card tech">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/GGDLV_20251213142525688.png" alt="Fighter jet">
+            <div class="card-content">
+                <div><span class="tag">LOISIRS TECH</span><h3>Jet de chasse télécommandé LED</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/drone-electric-fighter-jet-with-remote-control-24-ghz-frequency-equipped-with-colorful-led-lights" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card sante">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/AZe5E_20260311132625137.jpg" alt="Blackhead remover">
+            <div class="card-content">
+                <div><span class="tag">BEAUTÉ</span><h3>Extracteur de points noirs</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/gadget" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card sante">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/BZuBp_20260305101151474.jpg" alt="Facial cream">
+            <div class="card-content">
+                <div><span class="tag">BEAUTÉ</span><h3>Crème visage Collagène & Or 24k</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/cream" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card tech">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/PTW0X_20260222131055524.jpg" alt="Car lights">
+            <div class="card-content">
+                <div><span class="tag">ACCESSOIRES AUTO</span><h3>Éclairage intérieur voiture LED</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/car-ligths" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card maison">
+            <img src="https://shipeh.s3.amazonaws.com/CodDrop/Product/ahiuY_20260311121612993.jpg" alt="Coffee table">
+            <div class="card-content">
+                <div><span class="tag">MAISON</span><h3>Table basse élégante</h3></div>
+                <div class="price-tag">Paiement à la livraison</div>
+                <a href="https://omarbutique.youcan.store/products/coffee-table" target="_blank" class="btn-buy">🛒 Commander</a>
+            </div>
+        </div>
+
+        <div class="card sante">
+            <img src="https://cdn.lrworld.com/images_cms/images/content/kacheln/global/tile_big/2025/09-2025/tiles-big_figuactive-3er_81253.jpg" alt="FiguActive set">
+            <div class="card-content">
+                <div><span class="tag">BIEN-ÊTRE</span><h3>Set FiguActive x3 (Libre choix)</h3></div>
+                <div class="price-tag">Produit Premium</div>
+                <a href="https://shop.lrworld.com/home?PHP=y09hPwE9L5W0IGEn%2B%2B8mhw%3D%3D" target="_blank" class="btn-buy">🛒 Voir sur la boutique</a>
+            </div>
+        </div>
+
+        <div class="card sante">
+            <img src="https://cdn.lrworld.com/images_cms/images/content/kacheln/global/tile_big/2025/07-2025/tiles-big_body-mission-1-month_81260.jpg" alt="Body mission">
+            <div class="card-content">
+                <div><span class="tag">BIEN-ÊTRE</span><h3>Programme Body Mission (1 mois)</h3></div>
+                <div class="price-tag">Produit Premium</div>
+                <a href="https://shop.lrworld.com/home?PHP=y09hPwE9L5W0IGEn%2B%2B8mhw%3D%3D" target="_blank" class="btn-buy">🛒 Voir sur la boutique</a>
+            </div>
+        </div>
+
+        <div class="card sante">
+            <img src="https://cdn.lrworld.com/images_cms/images/content/kacheln/global/tile_big/2025/09-2025/tiles-big_figuactive-3er_81253.jpg" alt="FiguActive bars">
+            <div class="card-content">
+                <div><span class="tag">BIEN-ÊTRE</span><h3>Barres repas FiguActive</h3></div>
+                <div class="price-tag">Énergie & Santé</div>
+                <a href="https://shop.lrworld.com/home?PHP=y09hPwE9L5W0IGEn%2B%2B8mhw%3D%3D" target="_blank" class="btn-buy">🛒 Découvrir</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2026 Omar Market - Tous droits réservés</p>
+</footer>
+
+<script>
+    function filterSelection(c) {
+        var x = document.getElementsByClassName("card");
+        if (c == "all") c = "";
+        for (var i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+            if (x[i].className.indexOf(c) > -1) x[i].style.display = "flex";
+        }
+        var btns = document.getElementsByClassName("filter-btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].classList.remove("active");
+            if (btns[i].innerText.toLowerCase().includes(c) || (c=='' && btns[i].innerText=='TOUT')) btns[i].classList.add("active");
+        }
+    }
+</script>
+
+</body>
+</html>
